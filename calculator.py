@@ -21,11 +21,22 @@ def get_number(prompt):
     float() raises ValueError and the whole program crashes.
     FIX ME: wrap this in try/except so bad input asks again.
     """
-    raw = input(prompt)
-    return float(raw)
+    while True:
+        raw = input(prompt)
+ 
+ 
+        try:
+            return float(raw)
+        except ValueError:
+   
+   
+            print("That's not a number. Please try again.")
 
 
 def divide(a, b):
+    if b==0:
+        print("Cannot divide by zero")
+        return None
     """Return a / b.
 
     BUG: ZeroDivisionError if b == 0.
