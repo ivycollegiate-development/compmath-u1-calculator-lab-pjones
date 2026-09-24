@@ -22,16 +22,11 @@ def get_number(prompt):
     FIX ME: wrap this in try/except so bad input asks again.
     """
     while True:
-        raw = input(prompt)
- 
- 
+        raw = input(prompt) 
         try:
             return float(raw)
         except ValueError:
-   
-   
-            print("That's not a number. Please try again.")
-
+            print("That is not a number. Please try again.")
 
 def divide(a, b):
     if b==0:
